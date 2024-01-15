@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "./components/_Layout/Container/Container";
 import Header from "./components/_Layout/Header/Header";
 import Footer from "./components/_Layout/Footer/Footer";
-import Home from "./components/_Layout/Home/Home";
+import Content from "./components/_Layout/Content/Content";
 import Presentation from "./components/Presentation/Presentation"
 import Skills from "./components/Skills/Skills"
 import Experience from "./components/Experience/Experience"
@@ -21,7 +21,7 @@ function App() {
         
         <Container>
           <Routes>
-            <Route path="/" element={<Home />}>          
+            <Route path="/" element={<Content />}>          
               <Route path="/#presentation" element ={<Presentation />} ></Route>
               <Route path="/#skills" element ={<Skills />} ></Route>
               <Route path="/#experience" element ={<Experience />} ></Route>
