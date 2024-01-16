@@ -11,7 +11,7 @@ import NotFound from "./components/NotFound/NotFound";
 
 
 
-import "./App.css";
+import "./styles/css/App.css";
 
 function App() {
   return (

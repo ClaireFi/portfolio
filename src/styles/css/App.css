@@ -1,0 +1,75 @@
+/* Dark mode */
+body {
+   transition: background-color 0.5s ease;
+ }
+ body.dark {
+   background-color: #111;
+   color: #f1f1f1;
+ }
+ section {
+   margin-top: 2em;
+   margin-bottom: 2em;
+   padding-top: 2em;
+   padding-bottom: 2em;
+ }
+ .button{
+   transition: background-color 0.5s ease;
+ }
+ .button  {
+   border: 1px solid rgb(8 145 178);
+   padding: 0.5em 2em;
+   border-radius: 30px;
+   background-color: rgb(8 145 178);
+   color: #f1f1f1;
+ }
+ .button:hover {
+   background-color: #FFF;
+   color: rgb(8 145 178);
+ }
+
+/* Animation burger menu */ 
+
+ .line {
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    background: #000;
+    position: absolute;
+    top: 18px;
+    right : 0;
+    transition: all 0ms 300ms;
+}
+.contLine.active .line {
+    background: rgba(255,255,255,0);
+}
+.line::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    background: #000;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    transition: bottom 300ms 300ms ease, transform 300ms ease;
+}
+.line::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    background: #000;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    transition: top 300ms 300ms ease, transform 300ms ease;
+}
+
+.contLine.active .line::after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms ease, transform 300ms 300ms ease;
+}
+.contLine.active .line::before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms ease, transform 300ms 300ms ease;
+}

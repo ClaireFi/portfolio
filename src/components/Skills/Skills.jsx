@@ -1,5 +1,5 @@
 export default function Skills() {
   return (
-    <div>Mes compétences</div>
+    <div className="bg-secondary-500 text-white p-6">Mes compétences</div>
   )
 }

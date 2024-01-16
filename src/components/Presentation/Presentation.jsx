@@ -1,7 +1,7 @@
 import CV from "../../assets/CV.pdf"
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
-import computerBlue from "../../assets/computer_blue.svg"
-import computerWhite from "../../assets/computer_white.svg"
+import computerSun from "../../assets/computer_sun.svg"
+import computerMoon from "../../assets/computer_moon.svg"
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeProvider"
 
@@ -13,7 +13,7 @@ export default function Presentation() {
   const { toggleTheme, darkMode } = useContext(ThemeContext);
 
   return (
-    <section id="presentation" className="flex items-center">
+    <section id="presentation" className="flex items-center flex-col-reverse sm:flex-row">
 
       <div className="content w-[50%]">
         <div className="wrapperText my-4">
@@ -28,7 +28,7 @@ export default function Presentation() {
         </div>
       </div>
       <div className="wrapperPicture w-[50%]">
-        <img src={`${darkMode ? computerWhite : computerBlue}`} alt="" />
+        <img src={`${darkMode ? computerSun : computerMoon}`} alt="" />
       </div>
     
     </section>

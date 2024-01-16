@@ -1,41 +1,52 @@
 import { useState } from "react";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 import hamburger from "../../../../assets/hamburger.svg";
 import close from "../../../../assets/close.svg";
-
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
 
   return (
-    <nav className="flex ">
-   
-      <div className={`${showMenu ? "flex" : "hidden"}  flex-col items-center justify-center w-full top-full pb-5 sm:flex sm:relative sm:flex-row sm:pb-0  mr-8`}>
-        <Link to="/#presentation" className="inline-block py-2 mx-2 text-lg sm:py-0">
+    <nav
+      className={`${
+        showMenu ? " bg-secondary-500 h-screen w-screen" : ""
+      } p-4 flex flex-col font-secondary text-white relative sm:h-auto sm-w-auto sm:bg-none`}
+    >
+        <div 
+          onClick={() => setShowMenu(!showMenu)}
+          className={`${showMenu ? "active w-full" : "inactive"} flex contLine w-[40px] justify-end h-[12px] pt-8 pr-8 cursor-pointer relative sm:hidden`}
+          >
+          <div class="line"></div>
+        </div>
+
+     
+
+    
+      <div
+        className={`${
+          showMenu ? "flex h-screen" : "hidden"
+        }  flex-col items-center justify-center w-full top-full pb-5 sm:flex sm:relative sm:flex-row sm:pb-0 sm:mr-8`}
+      >
+        <Link
+          to="/#presentation"
+          className="inline-block py-2 mx-2 text-lg sm:py-0"
+        >
           Présentation
         </Link>
         <Link to="/#skills" className="inline-block py-2 mx-2 text-lg sm:py-0">
           Compétences
         </Link>
-        <Link to="/#experience" className="inline-block py-2 mx-2 text-lg sm:py-0">
+        <Link
+          to="/#experience"
+          className="inline-block py-2 mx-2 text-lg sm:py-0"
+        >
           Expérience
         </Link>
         <Link to="/#contact" className="inline-block py-2 mx-2 text-lg sm:py-0">
           Contact
         </Link>
       </div>
-      <button
-          onClick={() => setShowMenu(!showMenu)}
-          className="ml-auto sm:hidden"
-        >
-          <img
-            className="w-4"
-            src={showMenu ? close : hamburger}
-            alt={showMenu ? "Cacher le menu" : "Voir le menu"}
-          />
-        </button>
-      
     </nav>
   );
 }
