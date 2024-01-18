@@ -1,5 +1,11 @@
+import Container from "../_Layout/Container/Container";
+
 export default function Experience() {
   return (
-    <div>Mes expériences</div>
-  )
+    <Container>
+      <div>
+        <h2>Mes expériences</h2>
+      </div>
+    </Container>
+  );
 }

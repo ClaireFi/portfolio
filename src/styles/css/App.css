@@ -1,3 +1,6 @@
+/* Styles generiques */
+
+
 /* Dark mode */
 body {
    transition: background-color 0.5s ease;
@@ -29,20 +32,20 @@ body {
 
 /* Animation burger menu */ 
 
- .line {
-    width: 40px;
+nav .line {
+     width: 40px;
     height: 4px;
     border-radius: 5px;
     background: #000;
     position: absolute;
     top: 18px;
-    right : 0;
+    right : 0; 
     transition: all 0ms 300ms;
-}
-.contLine.active .line {
+} 
+nav .contLine.active .line {
     background: rgba(255,255,255,0);
-}
-.line::before {
+}   
+nav .line::before {
     content: "";
     position: absolute;
     bottom: 10px;
@@ -52,7 +55,7 @@ body {
     border-radius: 5px;
     transition: bottom 300ms 300ms ease, transform 300ms ease;
 }
-.line::after {
+nav .line::after {
     content: "";
     position: absolute;
     top: 10px;
@@ -62,14 +65,14 @@ body {
     border-radius: 5px;
     transition: top 300ms 300ms ease, transform 300ms ease;
 }
-
-.contLine.active .line::after {
+nav .contLine.active .line::after {
     top: 0;
     transform: rotate(45deg);
     transition: top 300ms ease, transform 300ms 300ms ease;
 }
-.contLine.active .line::before {
+nav .contLine.active .line::before {
     bottom: 0;
     transform: rotate(-45deg);
     transition: bottom 300ms ease, transform 300ms 300ms ease;
 }
+

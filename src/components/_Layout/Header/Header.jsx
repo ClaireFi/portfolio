@@ -15,7 +15,6 @@ export default function Header() {
           <a href={CV} download className="button mr-4">CV</a>
           <ToggleThemeButton />
         </div>
-     
       </div>
     </header>
   );

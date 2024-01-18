@@ -10,8 +10,8 @@ export default function Navbar() {
   return (
     <nav
       className={`${
-        showMenu ? " bg-secondary-500 h-screen w-screen" : ""
-      } p-4 flex flex-col font-secondary text-white relative sm:h-auto sm-w-auto sm:bg-none`}
+        showMenu ? " bg-secondary-500 text-white h-screen w-screen" : ""
+      } p-4 flex flex-col font-secondary  relative sm:h-auto sm-w-auto sm:bg-none`}
     >
         <div 
           onClick={() => setShowMenu(!showMenu)}

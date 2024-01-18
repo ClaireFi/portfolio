@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Container from "./components/_Layout/Container/Container";
 import Header from "./components/_Layout/Header/Header";
 import Footer from "./components/_Layout/Footer/Footer";
 import Content from "./components/_Layout/Content/Content";
@@ -18,8 +17,6 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        
-        <Container>
           <Routes>
             <Route path="/" element={<Content />}>          
               <Route path="/#presentation" element ={<Presentation />} ></Route>
@@ -29,7 +26,6 @@ function App() {
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Container>
       </BrowserRouter>
       <Footer />
     </>
