@@ -13,9 +13,11 @@ export default function Presentation() {
   })
   const { toggleTheme, darkMode } = useContext(ThemeContext);
 
+
+
   return (
     <Container>
-      <section id="presentation" className="flex items-center flex-col-reverse sm:flex-row">
+      <section id="presentation" className="flex items-center flex-col-reverse h-screen sm:flex-row">
 
         <div className="content w-[50%]">
           <div className="wrapperText my-4">

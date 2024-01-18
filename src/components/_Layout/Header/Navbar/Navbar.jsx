@@ -17,7 +17,7 @@ export default function Navbar() {
           onClick={() => setShowMenu(!showMenu)}
           className={`${showMenu ? "active w-full" : "inactive"} flex contLine w-[40px] justify-end h-[12px] pt-8 pr-8 cursor-pointer relative sm:hidden`}
           >
-          <div class="line"></div>
+          <div className="line"></div>
         </div>
 
      

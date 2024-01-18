@@ -1,49 +1,52 @@
+import { useEffect, useState, useRef } from "react";
 import Container from "../_Layout/Container/Container";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 export default function Skills() {
+
+  const skillsData = [
+    { label: "CSS", bgcolor: "#0028f2", completed: 80 },
+    { label: "Javascript", bgcolor: "#f0db4f", completed: 60 },
+    { label: "React", bgcolor: "#61dbfb", completed: 35 },
+    { label: "SEO", bgcolor: "#6a1b9a", completed: 40 },
+    { label: "Wordpress", bgcolor: "#5ad673", completed: 30 },
+    { label: "Accessibilité", bgcolor: "#ef6c00", completed: 40 },
+  ]
+
+const [completed, setCompleted] = useState(0);
+
+const skillsRef = useRef();
+
+useEffect(() => {
+ // setInterval(() => setCompleted(60, 2000));
+  const observer = new IntersectionObserver(entries => {
+    if(entries[0].isIntersecting){
+      setInterval(() => setCompleted(60, 2000));
+      observer.observe(skillsRef.current)
+    }
+  })
+ 
+  observer.observe(skillsRef.current)
+
+  return () => {
+    observer.unobserve(skillsRef.current)
+  }
+}, []);
+
   return (
     <div className="bg-secondary-500 text-white p-6">
       <Container>
         <h2 className="text-center text:xl sm:text-5xl">Mes compétences</h2>
-        <div className="grille-skill flex flex-wrap">
-          <div className="range-cont w-[50%]">
-            <p className="label-skill">JavaScript</p>
-            <p className="number-skill">90%</p>
-            <div className="barre-skill b1"></div>
-            <div className="barre-grises bg-slate-400 w-full"></div>
-          </div>
-          <div className="range-cont w-[50%]">
-            <p className="label-skill">SEO</p>
-            <p className="number-skill">75%</p>
-            <div className="barre-skill b2"></div>
-            <div className="barre-grises"></div>
-          </div>
-          <div className="range-cont w-[50%]">
-            <p className="label-skill">UI / UX</p>
-            <p className="number-skill">70%</p>
-            <div className="barre-skill b3"></div>
-            <div className="barre-grises"></div>
-          </div>
+        <div ref={skillsRef} className="grille-skill flex flex-wrap justify-between p-8">
+          {skillsData.map((item, index) => (
+            <div key={index} className="w-[45%] my-8">
+              <h3 className="text-xl mb-2">{item.label}</h3>
+              <ProgressBar bgcolor={item.bgcolor} completed={completed} />
 
-          <div className="range-cont w-[50%]">
-            <p className="label-skill">Node JS</p>
-            <p className="number-skill">80%</p>
-            <div className="barre-skill b4"></div>
-            <div className="barre-grises"></div>
-          </div>
-          <div className="range-cont w-[50%]">
-            <p className="label-skill">Wordpress</p>
-            <p className="number-skill">70%</p>
-            <div className="barre-skill b5"></div>
-            <div className="barre-grises"></div>
-          </div>
-          <div className="range-cont w-[50%]">
-            <p className="label-skill">React JS</p>
-            <p className="number-skill">80%</p>
-            <div className="barre-skill b6"></div>
-            <div className="barre-grises"></div>
-          </div>
+            </div>
+          ))}
         </div>
+        
       </Container>
     </div>
   );
