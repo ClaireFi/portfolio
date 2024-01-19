@@ -1,9 +1,8 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Container from "../_Layout/Container/Container";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 export default function Skills() {
-
   const skillsData = [
     { label: "CSS", bgcolor: "#0028f2", completed: 80 },
     { label: "Javascript", bgcolor: "#f0db4f", completed: 60 },
@@ -11,42 +10,58 @@ export default function Skills() {
     { label: "SEO", bgcolor: "#6a1b9a", completed: 40 },
     { label: "Wordpress", bgcolor: "#5ad673", completed: 30 },
     { label: "Accessibilité", bgcolor: "#ef6c00", completed: 40 },
-  ]
+  ];
 
-const [completed, setCompleted] = useState(0);
+  const [completed, setCompleted] = useState(Array(skillsData.length).fill(0));
 
-const skillsRef = useRef();
+  const skillsRef = useRef();
 
-useEffect(() => {
- // setInterval(() => setCompleted(60, 2000));
-  const observer = new IntersectionObserver(entries => {
-    if(entries[0].isIntersecting){
-      setInterval(() => setCompleted(60, 2000));
-      observer.observe(skillsRef.current)
-    }
-  })
- 
-  observer.observe(skillsRef.current)
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        skillsData.forEach((_, index) => {
+          startInterval(index);
+        });
+      }
+    });
 
-  return () => {
-    observer.unobserve(skillsRef.current)
-  }
-}, []);
+    observer.observe(skillsRef.current);
+
+    return () => {
+      observer.unobserve(skillsRef.current);
+    };
+  }, [skillsData]);
+
+  const startInterval = (index) => {
+
+    const intervalId = setTimeout(() => {
+      // Utilise la valeur de completed de la compétence sélectionnée
+      const skillCompleted = skillsData[index]?.completed || 0;
+
+      setCompleted((prevCompleted) => {
+        const newCompleted = [...prevCompleted];
+        newCompleted[index] = skillCompleted;
+        return newCompleted;
+      });
+    }, 200);
+
+    return () => {
+      clearTimeout(intervalId); 
+    };
+  };
 
   return (
-    <div className="bg-secondary-500 text-white p-6">
+    <div className="bg-secondary-500 text-white p-6" id="skills">
       <Container>
         <h2 className="text-center text:xl sm:text-5xl">Mes compétences</h2>
         <div ref={skillsRef} className="grille-skill flex flex-wrap justify-between p-8">
           {skillsData.map((item, index) => (
             <div key={index} className="w-[45%] my-8">
               <h3 className="text-xl mb-2">{item.label}</h3>
-              <ProgressBar bgcolor={item.bgcolor} completed={completed} />
-
+              <ProgressBar bgcolor={item.bgcolor} completed={completed[index]} />
             </div>
           ))}
         </div>
-        
       </Container>
     </div>
   );

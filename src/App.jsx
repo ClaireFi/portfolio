@@ -7,14 +7,15 @@ import Skills from "./components/Skills/Skills"
 import Experience from "./components/Experience/Experience"
 import Contact from "./components/Contact/Contact"
 import NotFound from "./components/NotFound/NotFound";
-
-
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeProvider"
 
 import "./styles/css/App.css";
 
 function App() {
+  const { toggleTheme, darkMode } = useContext(ThemeContext);
   return (
-    <>
+    <div className="dark:bg-[#111] dark:text-[#f1f1f1] [transition-property:background-color] duration-500 ease-[ease] delay-[0ms]">
       <BrowserRouter>
         <Header />
           <Routes>
@@ -28,7 +29,7 @@ function App() {
           </Routes>
       </BrowserRouter>
       <Footer />
-    </>
+    </div>
   );
 }
 
