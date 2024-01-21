@@ -19,9 +19,6 @@ export default function Navbar() {
           >
           <div className="line"></div>
         </div>
-
-     
-
     
       <div
         className={`${
@@ -30,20 +27,20 @@ export default function Navbar() {
       >
         <Link
           to="/#presentation"
-          className="inline-block py-2 mx-2 text-lg sm:py-0"
+          className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
         >
           Présentation
         </Link>
-        <Link to="/#skills" className="inline-block py-2 mx-2 text-lg sm:py-0">
+        <Link to="/#skills" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
           Compétences
         </Link>
         <Link
           to="/#experience"
-          className="inline-block py-2 mx-2 text-lg sm:py-0"
+          className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
         >
           Expérience
         </Link>
-        <Link to="/#contact" className="inline-block py-2 mx-2 text-lg sm:py-0">
+        <Link to="/#contact" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
           Contact
         </Link>
       </div>

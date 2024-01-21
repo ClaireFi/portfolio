@@ -20,7 +20,7 @@ export default function Skills() {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         skillsData.forEach((_, index) => {
-          startInterval(index);
+          startSetTimeOut(index);
         });
       }
     });
@@ -32,7 +32,7 @@ export default function Skills() {
     };
   }, [skillsData]);
 
-  const startInterval = (index) => {
+  const startSetTimeOut = (index) => {
 
     const intervalId = setTimeout(() => {
       // Utilise la valeur de completed de la compétence sélectionnée

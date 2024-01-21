@@ -15,7 +15,7 @@ import "./styles/css/App.css";
 function App() {
   const { toggleTheme, darkMode } = useContext(ThemeContext);
   return (
-    <div className="dark:bg-[#111] dark:text-[#f1f1f1] [transition-property:background-color] duration-500 ease-[ease] delay-[0ms]">
+    <div className="[transition-property:background-color] duration-500 ease-[ease] delay-[0ms] dark:bg-[#111] dark:text-[#f1f1f1]">
       <BrowserRouter>
         <Header />
           <Routes>
