@@ -9,6 +9,10 @@
    background-color: #111;
    color: #f1f1f1;
  }  */
+
+ html{
+  scroll-behavior: smooth;
+ }
  section {
    margin-top: 2em;
    margin-bottom: 2em;

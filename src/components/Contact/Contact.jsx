@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div id="contact">Contactez-moi</div>
+    <div id="contact" className="scroll-smooth">Contactez-moi</div>
     
   ) 
 }

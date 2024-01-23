@@ -35,6 +35,12 @@ export default function Navbar() {
           Compétences
         </Link>
         <Link
+          to="/#projects"
+          className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
+        >
+          Projects
+        </Link>
+        <Link
           to="/#experience"
           className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
         >

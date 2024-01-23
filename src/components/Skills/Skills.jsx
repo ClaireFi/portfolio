@@ -51,7 +51,7 @@ export default function Skills() {
   };
 
   return (
-    <div className="bg-secondary-500 text-white p-6" id="skills">
+    <div className="bg-secondary-500 text-white p-6 scroll-smooth" id="skills">
       <Container>
         <h2 className="text-center text:xl sm:text-5xl">Mes compétences</h2>
         <div ref={skillsRef} className="grille-skill flex flex-wrap justify-between p-8">
