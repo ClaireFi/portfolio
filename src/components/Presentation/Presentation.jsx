@@ -6,7 +6,6 @@ import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeProvider"
 import Container from "../_Layout/Container/Container"
 import linkedinBlue from "../../assets/linkedin_blue.svg"
-import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Presentation() {
   const [text, count] = useTypewriter({
@@ -18,7 +17,7 @@ export default function Presentation() {
 
 
   return (
-    <div>
+    <div className="fixed w-full">
       <Container>
         <section id="presentation" className="flex items-center flex-col-reverse h-screen scroll-smooth sm:flex-row">
         
