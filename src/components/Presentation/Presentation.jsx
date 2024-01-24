@@ -18,26 +18,28 @@ export default function Presentation() {
 
 
   return (
-    <Container>
-      <section id="presentation" className="flex items-center flex-col-reverse h-screen scroll-smooth sm:flex-row">
-      
-        <div className="content w-[50%]">
-          <div className="wrapperText my-4">
-            <p className="text-4xl my-6">Bienvenue sur <span className="font-bold text-cyan-600">{text}</span></p>
-            <p className="text-2xl my-4">Claire Fichter</p>
-            <p className="text-2xl text-cyan-600">Intégratrice Web</p>
-            <p className="text-2xl">6 ans d'expérience</p>
+    <div>
+      <Container>
+        <section id="presentation" className="flex items-center flex-col-reverse h-screen scroll-smooth sm:flex-row">
+        
+          <div className="content w-[50%]">
+            <div className="wrapperText my-4">
+              <p className="text-4xl my-6">Bienvenue sur <span className="font-bold text-cyan-600">{text}</span></p>
+              <p className="text-2xl my-4">Claire Fichter</p>
+              <p className="text-2xl text-cyan-600">Intégratrice Web</p>
+              <p className="text-2xl">6 ans d'expérience</p>
+            </div>
+            <div className="wrapperButton my-10 text-center flex items-end">
+              <a href="https://fr.linkedin.com/in/claire-fichter-1a9672a1" target="_blank" className="mr-4"><img src={linkedinBlue} className="w-[35px] inline-block" /></a>
+              <a href={CV} download className="button ml-4">CV</a>
+            </div>
           </div>
-          <div className="wrapperButton my-10 text-center flex items-end">
-            <a href="https://fr.linkedin.com/in/claire-fichter-1a9672a1" target="_blank" className="mr-4"><img src={linkedinBlue} className="w-[35px] inline-block" /></a>
-            <a href={CV} download className="button ml-4">CV</a>
+          <div className="wrapperPicture w-[50%]">
+            <img src={`${darkMode ? computerSun : computerMoon}`} alt="" />
           </div>
-        </div>
-        <div className="wrapperPicture w-[50%]">
-          <img src={`${darkMode ? computerSun : computerMoon}`} alt="" />
-        </div>
-      
-      </section>
-    </Container>
+        
+        </section>
+      </Container>
+    </div>
   )
 }
