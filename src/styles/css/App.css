@@ -1,14 +1,6 @@
 /* Styles generiques */
 
 
-/* Dark mode */
- /* body {
-   transition: background-color 0.5s ease;
- } */
- /* body.dark {
-   background-color: #111;
-   color: #f1f1f1;
- }  */
 
  html{
   scroll-behavior: smooth;
@@ -79,4 +71,9 @@ nav .contLine.active .line::before {
     transform: rotate(-45deg);
     transition: bottom 300ms ease, transform 300ms 300ms ease;
 }
+
+/* Animations card projects */
+.flipInX {
+  animation: flipInX 1s ease;
+} 
 

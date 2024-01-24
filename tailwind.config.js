@@ -27,7 +27,16 @@ module.exports = {
           800: '#010E11',
           900: '#000000',
           950: '#000000'
-        }
+        },
+        greenCustom: {
+          100: '#00c6b6',
+          500: '#5bdc9f',
+          900: '#aaed83'
+        },
+        yellowCustom: {
+          500: '#f9f871'
+        },
+
         //CUSTOM COLORS
         //https://www.tailwindshades.com/
         //or crtl g + ctrl k on hexa value (#007ce6)
