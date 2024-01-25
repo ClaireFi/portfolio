@@ -80,4 +80,6 @@ nav .contLine.active .line::before {
 .tada {
   animation: tada 1s ease;
 } 
-
+.wobble{
+  animation: wobble 1s ease;
+}
