@@ -53,10 +53,10 @@ export default function Skills() {
   return (
     <div className="bg-secondary-500 text-white p-6 scroll-smooth" id="skills">
       <Container>
-        <h2 className="text-center text:xl sm:text-5xl">Mes compétences</h2>
+        <h2 className="text-center text-3xl sm:text-5xl">Mes compétences</h2>
         <div ref={skillsRef} className="grille-skill flex flex-wrap justify-between p-8">
           {skillsData.map((item, index) => (
-            <div key={index} className="w-[45%] my-8">
+            <div key={index} className="w-[100%] sm:w-[45%] my-8">
               <h3 className="text-xl mb-2">{item.label}</h3>
               <ProgressBar bgcolor={item.bgcolor} completed={completed[index]} />
             </div>

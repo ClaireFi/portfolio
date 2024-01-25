@@ -70,12 +70,12 @@ export default function Experience() {
     
     <div id="experience" className="scroll-smooth bg-greenCustom-100 bg-opacity-5">
       <Container>
-        <h2 className="text-center text:xl sm:text-5xl">Mes expériences</h2>
-        <div className="my-12">
+        <h2 className="text-center text-3xl sm:text-5xl">Mes expériences</h2>
+        <div className="my:4 sm:my-12">
           <div className=" flex flex-col items-center">
             {
               experienceData.map((item, index) => (
-                <ScrollAnimation key={index} delay={item.delayAnim} animateIn='tada' initiallyVisible={true} className={`border ${item.color} rounded-md p-4 my-6 sm:w-[60%] transition hover:-translate-y-3 hover:ease-in`}>
+                <ScrollAnimation key={index} delay={item.delayAnim} animateIn='tada' initiallyVisible={true} className={`border ${item.color} text-primary rounded-md p-4 my-6 w-[80%] sm:w-[60%] transition hover:-translate-y-3 hover:ease-in`}>
                     <h3 className="text-2xl">{item.title}</h3>
                     <div className="dates font-semibold mb-2">{item.dates}</div>
                     <div className="tasks">

@@ -74,7 +74,7 @@ export default function Projects() {
   return (
     <div id="projects" className="scroll-smooth">
       <Container>
-        <h2 className="text-center text:xl mb-12 sm:text-5xl">Mes projets</h2>
+        <h2 className="text-center text-3xl mb-4 sm:mb-12 sm:text-5xl">Mes projets</h2>
         <div className="flex flex-wrap">
           {projectsData.map((item, index) => (
             <ScrollAnimation

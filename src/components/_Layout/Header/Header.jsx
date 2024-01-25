@@ -12,7 +12,7 @@ export default function Header() {
       <div className="flex flex-col items-end sm:items-center sm:flex-row ">
         <Navbar />
         <div className="flex items-center">
-          <a href={CV} download className="button mr-4">CV</a>
+          <a href={CV} download className="button mr-4 border border-2 border-white">CV</a>
           <ToggleThemeButton />
         </div>
       </div>
