@@ -77,3 +77,7 @@ nav .contLine.active .line::before {
   animation: flipInX 1s ease;
 } 
 
+.tada {
+  animation: tada 1s ease;
+} 
+

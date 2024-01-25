@@ -5,6 +5,7 @@ import Contact from "../../Contact/Contact"
 import Projects from "../../Projects/Projects"
 import { useContext } from "react"
 import { ThemeContext } from "../../../context/ThemeProvider"
+import Footer from "../Footer/Footer"
 
 
 
@@ -21,6 +22,7 @@ export default function Content() {
         <Projects />
         <Experience />
         <Contact />
+        <Footer />
       </div>
     
     

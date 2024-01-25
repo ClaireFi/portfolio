@@ -3,7 +3,7 @@ import linkedinWhite from "../../../assets/linkedin_white.svg"
 
 export default function Footer() {
   return (
-    <div className="bg-secondary-700 text-white">
+    <footer className="bg-secondary-700 text-white">
       <Container>
         <div className="flex flex-col sm:flex-row sm:justify-between">
           <span>Claire Fichter</span>
@@ -11,6 +11,6 @@ export default function Footer() {
 
         </div>
       </Container>
-    </div>
+    </footer>
   )
 }

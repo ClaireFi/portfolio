@@ -29,6 +29,7 @@ module.exports = {
           950: '#000000'
         },
         greenCustom: {
+          50: '#00acc0',
           100: '#00c6b6',
           500: '#5bdc9f',
           900: '#aaed83'
