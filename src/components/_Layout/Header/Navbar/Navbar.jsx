@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import hamburger from "../../../../assets/hamburger.svg";
-import close from "../../../../assets/close.svg";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
