@@ -1,17 +1,16 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeProvider";
 import Container from "../_Layout/Container/Container";
 import ScrollAnimation from "react-animate-on-scroll";
+import {calculateYearsExperience} from "../Utils/DateUtils"
 
 export default function Experience() {
 
+  const { toggleTheme, darkMode } = useContext(ThemeContext);
   
-  const startDate = new Date("2018-03-01");
-  const currentDate = new Date();
-
-  const timeDifference = currentDate - startDate;
-  const yearsSinceStart = Math.floor(timeDifference / (365.25 * 24 * 60 * 60 * 1000));
-  
-   
+  const startDateExperienceSqs = new Date("2018-03-01");
+  const yearsSinceStart = calculateYearsExperience(startDateExperienceSqs);
 
   const experienceData = [
     { 
@@ -68,14 +67,14 @@ export default function Experience() {
 
   return (
     
-    <div id="experience" className="scroll-smooth bg-greenCustom-100 bg-opacity-5">
+    <div id="experience" className="scroll-smooth bg-greenCustom-100 bg-opacity-15 dark:bg-opacity-10 [transition-property:background-color] duration-500 ease-[ease] delay-[0ms]">
       <Container>
         <h2 className="text-center text-3xl sm:text-5xl">Mes expériences</h2>
         <div className="my:4 sm:my-12">
           <div className=" flex flex-col items-center">
             {
               experienceData.map((item, index) => (
-                <ScrollAnimation key={index} delay={item.delayAnim} animateIn='tada' initiallyVisible={true} className={`border ${item.color} text-primary rounded-md p-4 my-6 w-[80%] sm:w-[60%] transition hover:-translate-y-3 hover:ease-in`}>
+                <ScrollAnimation key={index} delay={item.delayAnim} animateIn='tada' initiallyVisible={true} className={`border ${item.color} text-black rounded-md p-4 my-6 w-[80%] sm:w-[60%] transition hover:-translate-y-3 hover:ease-in`}>
                     <h3 className="text-2xl">{item.title}</h3>
                     <div className="dates font-semibold mb-2">{item.dates}</div>
                     <div className="tasks">

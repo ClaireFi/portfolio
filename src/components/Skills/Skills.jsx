@@ -1,8 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeProvider";
 import Container from "../_Layout/Container/Container";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
 export default function Skills() {
+
+  const { toggleTheme, darkMode } = useContext(ThemeContext);
+
   const skillsData = [
     { label: "CSS", bgcolor: "#0028f2", completed: 80 },
     { label: "Javascript", bgcolor: "#f0db4f", completed: 60 },
@@ -51,7 +56,7 @@ export default function Skills() {
   };
 
   return (
-    <div className="bg-secondary-500 text-white p-6 scroll-smooth" id="skills">
+    <div className="bg-secondary-500 dark:bg-secondary-00 text-white p-6 scroll-smooth" id="skills">
       <Container>
         <h2 className="text-center text-3xl sm:text-5xl">Mes compétences</h2>
         <div ref={skillsRef} className="grille-skill flex flex-wrap justify-between p-8">

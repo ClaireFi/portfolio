@@ -5,14 +5,14 @@ export default function Contact() {
   return (
     <Container>
       <div id="contact" className="scroll-smooth">
-        <h2 className="text-center text:xl -rotate-2 text-secondary-500 sm:text-5xl sm:mb-12">
+        <h2 className="text-center text-3xl sm:text-5xl text-secondary-500 mb-4 sm:mb-12">
           Me contacter
         </h2>
         <div className="flex justify-center">
           <ScrollAnimation
             animateIn="wobble"
             initiallyVisible={true}
-            className="sm:w-[50%] bg-secondary-500 p-4 rounded-lg text-black -rotate-2"
+            className="w-full sm:w-[50%] bg-secondary-500 p-4 rounded-lg text-black"
           >
             <form
               action="https://formspree.io/f/mqkredav"
@@ -44,7 +44,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="button w-1/4 self-center m-6 bg-white text-secondary-500"
+                className="button sm:w-1/4 self-center m-6 bg-white text-secondary-500"
               >
                 Envoyer
               </button>

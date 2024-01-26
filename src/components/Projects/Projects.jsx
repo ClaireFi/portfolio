@@ -38,7 +38,7 @@ export default function Projects() {
       content:
         "Habillage de la réservation en ligne d'Edenvillages (à partir de l'étape 1 du tunnel de réservation : détails de mon séjour) et de son espace client",
       link: "https://www.eden-villages.fr/",
-      tech: ["CSS", "JS", "REACT"],
+      tech: ["CSS", "JS"],
     },
     {
       title: "Projet perso :",
@@ -74,7 +74,7 @@ export default function Projects() {
   return (
     <div id="projects" className="scroll-smooth">
       <Container>
-        <h2 className="text-center text-3xl mb-4 sm:mb-12 sm:text-5xl">Mes projets</h2>
+        <h2 className="text-center text-3xl mb-4 sm:mb-12 sm:text-5xl text-greenCustom-100">Mes projets</h2>
         <div className="flex flex-wrap">
           {projectsData.map((item, index) => (
             <ScrollAnimation
