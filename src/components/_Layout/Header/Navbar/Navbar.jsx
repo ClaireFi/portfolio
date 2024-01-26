@@ -24,27 +24,27 @@ export default function Navbar() {
         }  flex-col items-center justify-center w-full top-full pb-5 sm:flex sm:relative sm:flex-row sm:pb-0 sm:mr-8`}
       >
         <Link
-          to="/#presentation"
+          to="/portfolio/#presentation"
           className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
         >
           Présentation
         </Link>
-        <Link to="/#skills" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
+        <Link to="/portfolio//#skills" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
           Compétences
         </Link>
         <Link
-          to="/#projects"
+          to="/portfolio//#projects"
           className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
         >
           Projects
         </Link>
         <Link
-          to="/#experience"
+          to="/portfolio//#experience"
           className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
         >
           Expérience
         </Link>
-        <Link to="/#contact" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
+        <Link to="/portfolio//#contact" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
           Contact
         </Link>
       </div>
