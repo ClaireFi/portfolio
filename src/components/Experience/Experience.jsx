@@ -15,7 +15,6 @@ export default function Experience() {
   const experienceData = [
     { 
       title: "Séquoiasoft - Développeuse Web",
-      dates: "Mars 2018 à aujourd'hui (#ici#)",
       dates: `Mars 2018 à aujourd'hui (${yearsSinceStart} ans)`,
       tasks: [
         "Intégration graphique d'un canal de réservation en ligne",
