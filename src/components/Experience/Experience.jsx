@@ -14,7 +14,7 @@ export default function Experience() {
 
   const experienceData = [
     { 
-      title: "Séquoiasoft - Développeuse Web",
+      title: "Développeuse Web",
       dates: `Mars 2018 à aujourd'hui (${yearsSinceStart} ans)`,
       tasks: [
         "Intégration graphique d'un canal de réservation en ligne",
@@ -28,7 +28,7 @@ export default function Experience() {
       delayAnim : 100
     },
     { 
-      title: "Styléo - Intégratrice Web",
+      title: "Intégratrice Web",
       dates: "Décembre 2017 (3 mois)",
       tasks: [
         "Réalisation de sites Wordpress dans une agence Web en respectant les maquettes fournies par les graphistes",
@@ -38,7 +38,7 @@ export default function Experience() {
       delayAnim : 500
     },
     { 
-      title: "Ria Création - Stage intégratrice Web",
+      title: "Stage intégratrice Web",
       dates: "Mai 2017 (6 mois)",
       tasks: [
         "Réalisation de sites Wordpress et Prestashop",
@@ -48,7 +48,7 @@ export default function Experience() {
       delayAnim : 1000
     },
     { 
-      title: "Eurexo - Gestionnaire d'experts",
+      title: "Gestionnaire d'experts",
       dates: "2009-2016 (7 ans)",
       tasks: [
         "Gestion du planning des experts",
