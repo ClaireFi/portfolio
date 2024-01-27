@@ -15,7 +15,7 @@ export default function Header() {
       <div className="flex flex-col items-end md:items-center md:flex-row ">
         <Navbar />
         <div className="flex items-center">
-          <a href={CV} download className="button mr-4 border-2 border-white dark:bg-secondary-600">CV</a>
+          {/* <a href={CV} download className="button mr-4 border-2 border-white dark:bg-secondary-600">CV</a> */}
           <ToggleThemeButton />
         </div>
       </div>

@@ -35,7 +35,7 @@ export default function Presentation() {
             </div>
             <div className="wrapperButton my-10 text-center flex items-end">
               <a href="https://fr.linkedin.com/in/claire-fichter-1a9672a1" target="_blank" className="mr-4"><img src={linkedinBlue} className="w-[35px] inline-block" /></a>
-              <a href={CV} download className="button ml-4">CV</a>
+              {/* <a href={CV} download className="button ml-4">CV</a> */}
             </div>
           </div>
           <div className="wrapperPicture w-full sm:w-[50%]">
