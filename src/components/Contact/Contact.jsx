@@ -44,7 +44,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="button sm:w-1/4 self-center m-6 bg-white text-secondary-500"
+                className="button sm:w-1/4 self-center m-6 bg-white text-secondary-500 hover:bg-white hover:font-bold"
               >
                 Envoyer
               </button>

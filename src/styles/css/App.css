@@ -20,14 +20,13 @@
    color: #f1f1f1;
  }
  .button:hover {
-   background-color: #FFF;
-   color: rgb(8 145 178);
+   background-color: #06657C; 
  }
 
 /* Animation burger menu */ 
 
 nav .line {
-     width: 40px;
+    width: 40px;
     height: 4px;
     border-radius: 5px;
     background: #000;
