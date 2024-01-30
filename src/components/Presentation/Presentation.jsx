@@ -34,7 +34,7 @@ export default function Presentation() {
               <p className="text-xl sm:text-2xl">{yearsSinceStart} ans d'expérience</p>
             </div>
             <div className="wrapperButton my-10 text-center flex items-end">
-              <a href="https://fr.linkedin.com/in/claire-fichter-1a9672a1" target="_blank" className="mr-4"><img src={linkedinBlue} className="w-[35px] inline-block" /></a>
+              <a href="https://fr.linkedin.com/in/claire-fichter-1a9672a1" target="_blank" className="mr-4"><img src={linkedinBlue} className="w-[35px] inline-block transition-transform transform hover:scale-110" /></a>
               {/* <a href={CV} download className="button ml-4">CV</a> */}
             </div>
           </div>

@@ -9,8 +9,8 @@ export default function ToggleThemeButton() {
 
   return (
     <div>
-      <button onClick={toggleTheme} className="cursor-pointer">
-        <img src={`${darkMode ? sun : moon}`} alt="Dark mode" className="w-[40px]" />
+      <button onClick={toggleTheme} className="cursor-pointer relative">
+        <img src={`${darkMode ? sun : moon}`} alt="Dark mode" className="w-[40px] transition-transform transform hover:scale-150 hover:rotate-90" />
       </button>
     </div>
   );

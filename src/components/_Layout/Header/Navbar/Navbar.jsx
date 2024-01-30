@@ -3,9 +3,13 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useContext } from "react";
 import { ThemeContext } from "../../../../context/ThemeProvider";
 
-export default function Navbar() {
-
+export default function Navbar(props) {
   const [showMenu, setShowMenu] = useState(false);
+
+  const handleToggleMenu = () => {
+    setShowMenu(!showMenu);
+    props.onShowMenuChange(!showMenu);
+  };
 
   const { toggleTheme, darkMode } = useContext(ThemeContext);
 
@@ -13,42 +17,60 @@ export default function Navbar() {
     <nav
       className={`${
         showMenu ? " bg-secondary-500 text-white h-screen w-screen" : ""
-      } p-4 flex flex-col font-secondary  relative sm:h-auto sm-w-auto sm:bg-none`}
+      } p-4 flex flex-col font-secondary relative sm:h-auto sm-w-auto sm:bg-none`}
     >
-        <div 
-          onClick={() => setShowMenu(!showMenu)}
-          className={`${showMenu ? "active w-full" : "inactive"} flex contLine w-[40px] justify-end h-[12px] pt-8 pr-8 cursor-pointer relative md:hidden`}
-          >
-          <div className="line dark:bg-white dark:after:bg-white dark:before:bg-white "></div>
-        </div>
-    
+      <div
+        onClick={handleToggleMenu}
+        className={`${
+          showMenu ? "active w-full" : "inactive"
+        } flex contLine w-[40px] justify-end h-[12px] pt-8 pr-8 cursor-pointer relative md:hidden`}
+      >
+        <div className="line dark:bg-white dark:after:bg-white dark:before:bg-white "></div>
+      </div>
+
       <div
         className={`${
           showMenu ? "flex h-screen" : "hidden"
-        }  flex-col items-center justify-center w-full top-full pb-5 md:flex sm:relative sm:flex-row sm:pb-0 sm:mr-8`}
+        }  flex-col items-center justify-center w-full top-full pb-5 sm:relative sm:flex-row sm:pb-0 sm:mr-8 md:flex`}
       >
         <Link
           to="/portfolio/#presentation"
-          className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
+          className={`${
+            showMenu ? "after:bg-white" : "after:bg-black"
+          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
           Présentation
         </Link>
-        <Link to="/portfolio//#skills" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
+        <Link
+          to="/portfolio//#skills"
+          className={`${
+            showMenu ? "after:bg-white" : "after:bg-black"
+          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+        >
           Compétences
         </Link>
         <Link
           to="/portfolio//#projects"
-          className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
+          className={`${
+            showMenu ? "after:bg-white" : "after:bg-black"
+          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
           Projects
         </Link>
         <Link
           to="/portfolio//#experience"
-          className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0"
+          className={`${
+            showMenu ? "after:bg-white" : "after:bg-black"
+          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
           Expérience
         </Link>
-        <Link to="/portfolio//#contact" className="inline-block hover:underline py-2 mx-2 text-lg sm:py-0">
+        <Link
+          to="/portfolio//#contact"
+          className={`${
+            showMenu ? "after:bg-white" : "after:bg-black"
+          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+        >
           Contact
         </Link>
       </div>
