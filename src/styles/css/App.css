@@ -70,13 +70,16 @@ nav .contLine.active .line::before {
 }
 
 /* Animations card projects */
-.flipInX {
-  animation: flipInX 1s ease;
-} 
 
-.tada {
-  animation: tada 1s ease;
-} 
-.wobble{
-  animation: wobble 1s ease;
+@media screen and (min-width: 768px) {
+  .flipInX {
+    animation: flipInX 1s ease;
+  } 
+
+  .tada {
+    animation: tada 1s ease;
+  } 
+  .wobble{
+    animation: wobble 1s ease;
+  }
 }
