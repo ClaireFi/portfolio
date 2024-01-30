@@ -27,7 +27,7 @@ export default function Navbar(props) {
           showMenu ? "active w-full" : "inactive"
         } flex contLine w-[40px] justify-end h-[12px] pt-8 pr-8 cursor-pointer relative md:hidden`}
       >
-        <div className="line dark:bg-white dark:after:bg-white dark:before:bg-white transition-none"></div>
+        <div className="line dark:bg-white dark:after:bg-white dark:before:bg-white"></div>
       </div>
 
       <div
