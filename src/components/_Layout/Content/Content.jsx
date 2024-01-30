@@ -14,7 +14,7 @@ export default function Content() {
   const { toggleTheme, darkMode } = useContext(ThemeContext);
 
   return (
-    <main id="main">
+    <main id="main" className="font-primary">
 
       <Presentation />
       <div className="relative top-[100vh] z-10 bg-white dark:bg-[#111] [transition-property:background-color] duration-500 ease-[ease] delay-[0ms]">
