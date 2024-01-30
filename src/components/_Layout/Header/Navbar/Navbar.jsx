@@ -17,7 +17,7 @@ export default function Navbar(props) {
     <nav
       className={`${
         showMenu ? " bg-secondary-500 text-white h-screen w-screen" : ""
-      } p-4 flex flex-col font-secondary relative sm:h-auto sm-w-auto sm:bg-none`}
+      } p-4 flex flex-col font-semibold relative sm:h-auto sm-w-auto sm:bg-none`}
     >
       <div
         onClick={handleToggleMenu}
@@ -25,7 +25,7 @@ export default function Navbar(props) {
           showMenu ? "active w-full" : "inactive"
         } flex contLine w-[40px] justify-end h-[12px] pt-8 pr-8 cursor-pointer relative md:hidden`}
       >
-        <div className="line dark:bg-white dark:after:bg-white dark:before:bg-white "></div>
+        <div className="line dark:bg-white dark:after:bg-white dark:before:bg-white transition-none"></div>
       </div>
 
       <div
@@ -36,40 +36,40 @@ export default function Navbar(props) {
         <Link
           to="/portfolio/#presentation"
           className={`${
-            showMenu ? "after:bg-white" : "after:bg-black"
-          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+            showMenu ? "after:bg-white text-3xl" : "after:bg-black text-lg"
+          } inline-block mx-2 py-2  sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
           Présentation
         </Link>
         <Link
           to="/portfolio//#skills"
           className={`${
-            showMenu ? "after:bg-white" : "after:bg-black"
-          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+            showMenu ? "after:bg-white text-3xl my-2" : "after:bg-black text-lg"
+          } inline-block mx-2 py-2 sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
           Compétences
         </Link>
         <Link
           to="/portfolio//#projects"
           className={`${
-            showMenu ? "after:bg-white" : "after:bg-black"
-          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+            showMenu ? "after:bg-white text-3xl my-2" : "after:bg-black text-lg"
+          } inline-block mx-2 py-2 sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
-          Projects
+          Projets
         </Link>
         <Link
           to="/portfolio//#experience"
           className={`${
-            showMenu ? "after:bg-white" : "after:bg-black"
-          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+            showMenu ? "after:bg-white text-3xl my-2" : "after:bg-black text-lg"
+          } inline-block mx-2 py-2  sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
           Expérience
         </Link>
         <Link
           to="/portfolio//#contact"
           className={`${
-            showMenu ? "after:bg-white" : "after:bg-black"
-          } inline-block mx-2 py-2 text-lg sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+            showMenu ? "after:bg-white text-3xl my-2" : "after:bg-black text-lg"
+          } inline-block mx-2 py-2 sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
         >
           Contact
         </Link>

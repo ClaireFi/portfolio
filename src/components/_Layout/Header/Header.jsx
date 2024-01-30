@@ -16,7 +16,7 @@ export default function Header() {
 
 
   return (
-    <header className="flex flex-row justify-between flex-wrap fixed top-0 w-full bg-opacity-50 backdrop-blur-sm z-20 md:p-4">
+    <header className="flex flex-row justify-between items-center flex-wrap fixed top-0 w-full bg-opacity-50 backdrop-blur-sm z-20 md:p-4">
       <span className={`${showMenu && "hidden"} md:flex items-center text-2xl font-semibold p-4`}>Claire Fichter</span>
       <div className={`${showMenu ? "flex-col" : "flex-row-reverse"} flex  items-end md:items-center md:flex-row`}>
         <Navbar onShowMenuChange={handleShowMenuChange} />
