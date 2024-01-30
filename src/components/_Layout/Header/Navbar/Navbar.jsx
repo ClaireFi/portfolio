@@ -38,7 +38,7 @@ export default function Navbar(props) {
 
       >
         <Link
-          to="/portfolio/#presentation"
+          to="/portfolio/#main"
           className={`${
             showMenu ? "after:bg-white text-2xl" : "after:bg-black text-lg"
           } inline-block mx-2 py-2  sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
