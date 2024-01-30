@@ -11,7 +11,9 @@ export default function Navbar(props) {
     props.onShowMenuChange(!showMenu);
   };
 
+
   const { toggleTheme, darkMode } = useContext(ThemeContext);
+
 
   return (
     <nav
@@ -32,12 +34,15 @@ export default function Navbar(props) {
         className={`${
           showMenu ? "flex h-screen" : "hidden"
         }  flex-col items-center justify-center w-full top-full pb-5 sm:relative sm:flex-row sm:pb-0 sm:mr-8 md:flex`}
+        onClick={showMenu ? handleToggleMenu : undefined}
+
       >
         <Link
           to="/portfolio/#presentation"
           className={`${
             showMenu ? "after:bg-white text-2xl" : "after:bg-black text-lg"
           } inline-block mx-2 py-2  sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+          onClick={showMenu ? handleToggleMenu : undefined}
         >
           Présentation
         </Link>
@@ -46,6 +51,7 @@ export default function Navbar(props) {
           className={`${
             showMenu ? "after:bg-white text-2xl my-2" : "after:bg-black text-lg"
           } inline-block mx-2 py-2 sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+          onClick={showMenu ? handleToggleMenu : undefined}
         >
           Compétences
         </Link>
@@ -54,6 +60,7 @@ export default function Navbar(props) {
           className={`${
             showMenu ? "after:bg-white text-2xl my-2" : "after:bg-black text-lg"
           } inline-block mx-2 py-2 sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+          onClick={showMenu ? handleToggleMenu : undefined}
         >
           Projets
         </Link>
@@ -62,6 +69,7 @@ export default function Navbar(props) {
           className={`${
             showMenu ? "after:bg-white text-2xl my-2" : "after:bg-black text-lg"
           } inline-block mx-2 py-2  sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+          onClick={showMenu ? handleToggleMenu : undefined}
         >
           Expérience
         </Link>
@@ -70,6 +78,7 @@ export default function Navbar(props) {
           className={`${
             showMenu ? "after:bg-white text-2xl my-2" : "after:bg-black text-lg"
           } inline-block mx-2 py-2 sm:py-0 after:content-[''] after:block after:w-0 after:h-[2px] dark:after:bg-white after:rounded-full after:mx-auto after:mt-[5px] after:transition-all after:duration-200 after:ease-out after:hover:w-full`}
+          onClick={showMenu ? handleToggleMenu : undefined}
         >
           Contact
         </Link>
