@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { ThemeContext } from "../../../context/ThemeProvider";
 import Navbar from "./Navbar/Navbar";
 import ToggleThemeButton from "./ToggleThemeButton/ToggleThemeButton";
-import CV from "../../../assets/CV.pdf"
 
 
 export default function Header() {

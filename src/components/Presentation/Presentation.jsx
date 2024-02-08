@@ -1,5 +1,4 @@
 import {calculateYearsExperience} from "../Utils/DateUtils"
-import CV from "../../assets/CV.pdf"
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import computerSun from "../../assets/computer_sun.svg"
 import computerMoon from "../../assets/computer_moon.svg"
